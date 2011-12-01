@@ -35,7 +35,7 @@ group :test, :development do
 end
 
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '1.0.2'
   gem 'capybara'
   gem 'database_cleaner'   # Limpia la base de datos despues de cada prueba
 end
