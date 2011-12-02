@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ticketee</title>
+  <title>
+     <% if content_for?(:title) %>
+       <%= yield(:title) %>
+     <% else %>
+       Ticketee
+     <% end %>
+  </title>
   <%= stylesheet_link_tag    "application" %>  # hojas de estilos de app/assets/stylesheets
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<%= yield %>  # En cada momento carga la vista de la accion correspondiente
   
 <% flash.each do |key, value| %>    # Esto carga los mensajes flash
   <div class='flash' id='<%= key %>'>

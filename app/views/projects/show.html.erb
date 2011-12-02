@@ -5,4 +5,8 @@
 
 <%= "show.html" %>
 
+<!-- Hacemos uso de la funcion title en el helper para hacer que el titulo sea dinamico
+dependiendo de la accion que se esta llevando a cabo -->
+<% title(@project.name, "Projects") %>  
+
 <h2><%= @project.name %></h2>
