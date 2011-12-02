@@ -1,0 +1,14 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= "_form.html" %>
+
+<%= form_for(@project) do |f| %>  # asocia @project al de la action new o edit
+  <p>
+   <%= f.label :name, "Project name"  %>
+   <%= f.text_field :name %>
+  </p>
+  <%= f.submit %>
+<% end %>
