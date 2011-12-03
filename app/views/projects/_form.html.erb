@@ -5,7 +5,9 @@
 
 <%= "_form.html" %>
 
-<%= form_for(@project) do |f| %>  # asocia @project al de la action new o edit
+<!-- asocia @project al de la action new o edit -->
+<%= form_for(@project) do |f| %>  
+  <%= f.error_messages %>
   <p>
    <%= f.label :name, "Project name"  %>
    <%= f.text_field :name %>

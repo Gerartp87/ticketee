@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   
   def index
-    
+    @projects = Project.all   # Sacamos todos de la base de datos
   end
   
   def new
@@ -10,9 +10,13 @@ class ProjectsController < ApplicationController
   
   def create
     @project = Project.new(params[:project])
-    @project.save   # Guardamos el project en la base de datos
-    flash[:notice] = "Project has been created."  # Pasar mensaje a la siguiente peticion
-    redirect_to @project  # Esto redigiria al show del project
+    if @project.save   # Si se ha metido campo name deja meter en la base de datos
+      flash[:notice] = "Project has been created."
+      redirect_to @project
+    else  # Si no se ha metido campo name
+      flash[:alert] = "Project has not been created."
+      render :action => "new"
+    end
   end
   
   def show
