@@ -39,6 +39,12 @@ class TicketsController < ApplicationController
     end
   end
   
+  def destroy
+    @ticket.destroy
+    flash[:notice] = "Ticket has been deleted."
+    redirect_to @project
+  end
+  
   
   # Se usa project_id en lugar de id solo para diferenciar de cuando buscamos el id de un ticket que sera solo id
   private
