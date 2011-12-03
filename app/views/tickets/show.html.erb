@@ -8,5 +8,9 @@
 <!-- Simple_format transforma los finales de linea del form en <br> -->
 <div id='ticket'>
   <h2><%= @ticket.title %></h2>
+  <!-- edit_project_ticket_path 
+  edit_project_ticket_path(@project, @ticket)-->
+  <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>  
   <%= simple_format(@ticket.description) %>
 </div>
+

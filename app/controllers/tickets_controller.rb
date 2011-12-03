@@ -22,9 +22,23 @@ class TicketsController < ApplicationController
     end
   end
   
+  # las funciones del private ya hacen todo lo que hay que hacer
   def show
-  
   end
+  
+  def edit
+  end
+  
+  def update
+    if @ticket.update_attributes(params[:ticket])
+      flash[:notice] = "Ticket has been updated."
+      redirect_to [@project, @ticket]
+    else
+      flash[:alert] = "Ticket has not been updated."
+      render :action => "edit"
+    end
+  end
+  
   
   # Se usa project_id en lugar de id solo para diferenciar de cuando buscamos el id de un ticket que sera solo id
   private
