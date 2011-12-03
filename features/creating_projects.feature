@@ -10,7 +10,7 @@ Feature: Creating projects
     When I follow "New Project"
 
   Scenario: Creating a project
-    And I fill in "Project name" with "TextMate 2"
+    And I fill in "Name" with "TextMate 2"
     And I press "Create Project"
     Then I should see "Project has been created."
     And I should be on the project page for "TextMate 2"
