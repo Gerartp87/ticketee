@@ -1,5 +1,7 @@
 Ticketee::Application.routes.draw do
   
+  devise_for :users # rutas para user registration, signup, editing and confirmation, and password retrieval
+
   root :to => "projects#index"   # Indicamos donde ir en la ruta raiz(pag inicial)
   
   # Nested routing, tickets dentro de un project

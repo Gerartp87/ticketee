@@ -41,3 +41,5 @@ group :test do
   gem 'database_cleaner'   # Limpia la base de datos despues de cada prueba
   gem 'factory_girl' # Para crear objetos ejemplo para las pruebas
 end
+
+gem 'devise', '~> 1.4.3'

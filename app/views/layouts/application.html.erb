@@ -15,6 +15,10 @@
 <body>
 
 <h1><%= link_to "Ticketee", root_path %></h1>
+
+<nav>
+  <%= link_to "Sign up", new_user_registration_path %>
+</nav>
   
 <%= yield %>  # En cada momento carga la vista de la accion correspondiente
   
