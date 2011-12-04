@@ -40,6 +40,7 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'   # Limpia la base de datos despues de cada prueba
   gem 'factory_girl' # Para crear objetos ejemplo para las pruebas
+  gem 'email_spec'
 end
 
 gem 'devise', '~> 1.4.3'
