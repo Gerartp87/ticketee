@@ -3,7 +3,9 @@
 # and open the template in the editor.
 %>
 
+<%= admins_only do %>   <!-- Solo los admin puedes crear un nuevo proyecto -->
 <%= link_to "New Project", new_project_path %>
+<% end %>
 
 <h2>Projects</h2>
 <ul>

@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
   
+  # Miramos si es admin o no para dejar hacer accion
+  before_filter :authorize_admin!, :except => [:index, :show]
   # Indicamos que antes de show, edit, update y destroy se haga find_project
   before_filter :find_project, :only => [:show,
                                          :edit,
